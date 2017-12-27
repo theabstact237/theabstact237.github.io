@@ -1,0 +1,30 @@
+ <!-- login page -->
+	<div class="col-xs-12 col-sm-9 content">
+			<form class="form-horizontal" role="form" name="LoginForm" novalidate>
+				<h2>Member Login</h2>
+				<small>If you are already register please login by providing the formation bellow</small>
+				<div class="form-group"  ng-class="{ 'has-error has-feedback' : LoginForm.emailid.$invalid && !LoginForm.emailid.$pristine }">
+					<label for="emailid" class="col-sm-2 control-label">E-mail</label>
+					<div class="input-group col-sm-4">
+						<input type="email" class="form-control" id="emailid" name="emailid" placeholder="email" ng-model="login.email" required>
+						<span ng-show="LoginForm.emailid.$invalid && !LoginForm.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		                <span ng-show="LoginForm.emailid.$invalid && !LoginForm.emailid.$pristine"
+		                class="help-block">Your email must have characters like @.</span>
+		                <span ng-show="LoginForm.emailid.$error.required && !LoginForm.emailid.$pristine"
+		                class="help-block">This field is required.</span>
+					</div>
+				</div>
+			<div class="form-group" ng-class="{ 'has-error' : LoginForm.password.$invalid && !LoginForm.password.$pristine }">
+		          <label for="password" class="col-sm-2 control-label">password</label>
+		         	 <div class="input-group col-sm-4">
+		            	<input type="password" class="form-control" id="password" name="password" placeholder="password" ng-model="login.password" ng-minlength="8" required>
+		             	<span ng-show="LoginForm.password.$invalid && !LoginForm.password.$pristine"
+		                    class="help-block">Your password must be at least 8 character long.</span>
+		                 <span ng-show="LoginForm.password.$error.required && !LoginForm.password.$pristine"
+		                    class="help-block">This field is required.</span>
+          			</div>
+       		</div>
+				<input type="submit" name="login" value="Login" class="btn btn-primary col-md-offset-5" ng-disabled="LoginForm.$invalid">
+			</form>
+	</div>
+	

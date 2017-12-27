@@ -1,0 +1,23 @@
+{
+  "name": "Alumni",
+  "description": "CUIB Alumni website",
+  "main": "index.html",
+  "keywords": [
+    "Alumni",
+    "Parent",
+    "Faculty"
+  ],
+  "authors": [
+    "Father George"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

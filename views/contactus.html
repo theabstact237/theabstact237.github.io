@@ -1,0 +1,34 @@
+ 	<div class="col-xs-12 col-sm-9 content">
+			<form class="form-horizontal" role="form" name="ContactForm" ng-submit="contactUs()" novalidate>
+				<h2>Contact Us</h2>
+				<div class="form-group" ng-class="{ 'has-error' : ContactForm.name.$error.required && !ContactForm.name.$pristine }">
+          			<label for="name" class="col-sm-2 control-label">Name</label>
+         	 		<div class="input-group col-sm-7">
+         			<input type="text" name="name" class="form-control" id="name" placeholder="Enter your name" ng-model="contact.name" required>
+          			<span ng-show="ContactForm.name.$error.required && !ContactForm.name.$pristine"
+                    class="help-block">This field is required.</span>
+          			</div>
+       		 	</div>
+				<div class="form-group"  ng-class="{ 'has-error has-feedback' : ContactForm.emailid.$invalid && !ContactForm.emailid.$pristine }">
+					<label for="emailid" class="col-sm-2 control-label">email address</label>
+					<div class="input-group col-sm-7">
+						<input type="email" class="form-control" id="emailid" name="emailid" placeholder="email address" ng-model="contact.email" required>
+						<span ng-show="ContactForm.emailid.$invalid && !ContactForm.emailid.$pristine" class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+		                <span ng-show="ContactForm.emailid.$invalid && !ContactForm.emailid.$pristine"
+		                class="help-block">Your email must have characters like @ .</span>
+		                <span ng-show="ContactForm.emailid.$error.required && !ContactForm.emailid.$pristine"
+		                class="help-block">This field is required.</span>
+					</div>
+				</div>
+				<div class="form-group" ng-class="{ 'has-error' : ContactForm.message.$error.required && !ContactForm.message.$pristine }">
+          			<label for="message" class="col-sm-2 control-label">Message</label>
+         	 		<div class="input-group col-sm-7">
+         			<textarea class="form-control" name="message" id="message" rows="13" ng-model="contact.message" placeholder="Any information to exchange with the school?" required></textarea>
+          			<span ng-show="ContactForm.message.$error.required && !ContactForm.message.$pristine"
+                    class="help-block">This field is required.</span>
+          			</div>
+       		 	</div>
+				<input type="submit" name="login" value="Submit" class="btn btn-primary col-md-offset-8" ng-disabled="ContactForm.$invalid">
+			</form>
+	</div>
+

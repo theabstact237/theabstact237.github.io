@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Alumni">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alumni Home">
+  <title>CUIB ALUMNI</title>
+  <!-- build:css styles/main.css -->
+  <script src="scripts/index.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="bower_components/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+  <link rel="stylesheet"  href="bower_components/bootstrap/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/css/bootstrap-social.css">
+  <!-- endbuild -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+</head>
+<body>
+<div ui-view="header"></div>
+<!-- content page -->
+<div class="container">
+  <div class="row row-content">
+    <div class="col-xs-12 col-sm-3">
+          <p>Social Media'splace</p>
+    </div>
+    <div ui-view="content"></div>
+  </div>
+</div>
+<div ui-view="footer"></div>
+<!-- build:js scrips/main.js -->
+  <script src="bower_components/angular/angular.min.js"></script>
+   <script src="scripts/controller.js"></script>
+   <script src="scripts/app.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+ <script src="bower_components/bootstrap/js/jquery-3.2.1.min.js"></script>
+ <script src="bower_components/bootstrap/js/bootstrap.min.js"></script>
+   <script src="scripts/sample.js"></script>
+ <!-- endbuild -->
+ <script src="country_picker/js/countrypicker.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+ <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>
